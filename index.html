@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Angular Application</title>
+</head>
+<body>
+	<div ng-app="app" class="app">
+        <h1>Equisolve Code Challenge</h1>
+        <!-- display sorted list -->
+        <div ng-controller="listController as list">
+            <ul>
+                <li ng-repeat="item in list.data">{{item.published_at}} - {{item.title}}</li>
+            </ul>
+        </div>
+	</div>
+
+	<script src="js/angular.js"></script>
+    <script src="js/app/app.js"></script>
+    <script src="js/app/controllers/listController.js"></script>
+    <script src="js/app/services/listService.js"></script>
+</body>
+</html>
